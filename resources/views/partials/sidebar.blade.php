@@ -23,9 +23,18 @@
     {{-- <hr class="sidebar-divider"> --}}
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('post.root') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Posts</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+            aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Posts</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('post.root') }}">All Posts</a>
+                <a class="collapse-item" href="{{ route('post.create') }}">Create Post</a>
+            </div>
+        </div>
     </li>
 
     <!-- Divider -->
