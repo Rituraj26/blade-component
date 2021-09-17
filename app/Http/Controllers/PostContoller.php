@@ -26,7 +26,11 @@ class PostContoller extends Controller
      */
     public function create()
     {
-        return view('post.form');
+        return view('post.form')->with([
+            'id' => '',
+            'title' => '', 
+            'body' => ''
+        ]);
     }
 
     /**
